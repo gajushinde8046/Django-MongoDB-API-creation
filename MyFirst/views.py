@@ -41,7 +41,7 @@ def get(request, empID):
             # response = json.dumps([{'Success':'product fetched successfully!'}])  
             response = json.dumps([{ 'empID': a.empID, 'Employee Name': a.empName ,'Mobile': a.empMobile,'Address': a.empAddress}])
         except:
-            response = json.dumps([{ 'Error': 'No Product with that name'}])
+            response = json.dumps([{ 'Error': 'No Product with this ID'}])
     return HttpResponse(response, content_type='text/json')
 # Create your views here.
 from django.shortcuts import render
